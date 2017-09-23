@@ -12,11 +12,11 @@ namespace Ulatina.Electiva.WcfArticulos
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class ArticulosPerdidos : IArticulosPerdidos
     {
-        public int IngresarArticuloPerdido(ArticuloPerdido elArticulo)
+        public int IngresarArticuloPerdido(ArticuloPerdido elArticulo, IList<Foto> lasFotos)
         {
             // Especificaciones.ArticulosPerdidos laEspecificacion = new Especificaciones.ArticulosPerdidos();
             var laEspecificacion = new Especificaciones.ArticulosPerdidos();
-            var elResultado = laEspecificacion.IngresarArticuloPerdido(elArticulo);
+            var elResultado = laEspecificacion.IngresarArticuloPerdido(elArticulo, lasFotos);
 
             return elResultado;
         }

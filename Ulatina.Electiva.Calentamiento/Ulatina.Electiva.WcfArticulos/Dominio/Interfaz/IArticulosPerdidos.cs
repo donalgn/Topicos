@@ -15,7 +15,7 @@ namespace Ulatina.Electiva.WcfArticulos
     {
 
         [OperationContract]
-        int IngresarArticuloPerdido(ArticuloPerdido elArticulo);
+        int IngresarArticuloPerdido(ArticuloPerdido elArticulo, IList<Foto> lasFotos);
 
         [OperationContract]
         string GetData(int elValor);
@@ -29,12 +29,31 @@ namespace Ulatina.Electiva.WcfArticulos
     [DataContract]
     public class ArticuloPerdido
     {
+        [DataMember]
+        public int IdArticulo;
+        [DataMember]
         public DateTime FechaDeIngreso;
+        [DataMember]
         public string UbicacionDondeSeEncontro;
+        [DataMember]
         public DateTime FechaDeHallazgo;
+        [DataMember]
         public MiColor Elcolor;
+        [DataMember]
         public string Senas;
+        [DataMember]
         public string Marca;
+    }
+
+    [DataContract]
+    public class Foto
+    {
+        [DataMember]
+        public int IdFoto;
+        [DataMember]
+        public int IdArticulo;
+        [DataMember]
+        public byte[] LaFoto;
     }
 
     [DataContract]
