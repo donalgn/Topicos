@@ -38,16 +38,14 @@ namespace Ulatina.Electiva.WcfArticulos.Especificaciones
             //    resultado = -2;
 
             // VERSIÓN 3
-            if (laValidacion.SeIncluyeAlMenosUnaFoto(lasFotos) &&
+            if (laValidacion.SeIncluyeAlMenosUnaFoto(lasFotos) &
                 (laValidacion.LaFechaNoEsFutura(elArticulo.FechaDeHallazgo)))
                 {
                     var laAccion = new Acciones.ArticulosPerdidos();
                     resultado = laAccion.IngresarArticuloPerdido(elArticulo, lasFotos);
-
                 }
             else
-                resultado = -1;
-
+                throw new Exception(laValidacion.TodosLosErroresConcatenados);
 
             return resultado;
         }

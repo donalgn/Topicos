@@ -7,6 +7,9 @@ namespace Ulatina.Electiva.WcfArticulos.Validaciones
 {
     public class Articulos
     {
+        //private string Delimitador = Environment.NewLine;
+        private string Delimitador = " | ";
+
         private IList <string> MisErroresPrivados;
 
         public IList<string> ListaDeErrores
@@ -14,6 +17,18 @@ namespace Ulatina.Electiva.WcfArticulos.Validaciones
             get
             {
                 return (MisErroresPrivados);
+            }
+        }
+
+        public string TodosLosErroresConcatenados
+        {
+            get
+            {
+                var resultado = string.Empty;
+                if (ListaDeErrores.Count > 0)
+                    resultado = string.Join(Delimitador, ListaDeErrores);
+
+                return resultado;
             }
         }
 
