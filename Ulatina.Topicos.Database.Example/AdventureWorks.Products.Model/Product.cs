@@ -11,7 +11,9 @@ namespace AdventureWorks.Products.Model
 {
     using System;
     using System.Collections.Generic;
+    using System.Runtime.Serialization;
     
+    [DataContract]
     public partial class Product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,31 +22,56 @@ namespace AdventureWorks.Products.Model
             this.ProductReviews = new HashSet<ProductReview>();
         }
     
-        public int ProductID { get; set; }
-        public string Name { get; set; }
-        public string ProductNumber { get; set; }
-        public bool MakeFlag { get; set; }
-        public bool FinishedGoodsFlag { get; set; }
-        public string Color { get; set; }
-        public short SafetyStockLevel { get; set; }
-        public short ReorderPoint { get; set; }
-        public decimal StandardCost { get; set; }
-        public decimal ListPrice { get; set; }
-        public string Size { get; set; }
-        public string SizeUnitMeasureCode { get; set; }
-        public string WeightUnitMeasureCode { get; set; }
-        public Nullable<decimal> Weight { get; set; }
-        public int DaysToManufacture { get; set; }
-        public string ProductLine { get; set; }
-        public string Class { get; set; }
-        public string Style { get; set; }
-        public Nullable<int> ProductSubcategoryID { get; set; }
-        public Nullable<int> ProductModelID { get; set; }
-        public System.DateTime SellStartDate { get; set; }
-        public Nullable<System.DateTime> SellEndDate { get; set; }
-        public Nullable<System.DateTime> DiscontinuedDate { get; set; }
-        public System.Guid rowguid { get; set; }
-        public System.DateTime ModifiedDate { get; set; }
+        [DataMember]
+    public int ProductID { get; set; }
+        [DataMember]
+    public string Name { get; set; }
+        [DataMember]
+    public string ProductNumber { get; set; }
+        [DataMember]
+    public bool MakeFlag { get; set; }
+        [DataMember]
+    public bool FinishedGoodsFlag { get; set; }
+        [DataMember]
+    public string Color { get; set; }
+        [DataMember]
+    public short SafetyStockLevel { get; set; }
+        [DataMember]
+    public short ReorderPoint { get; set; }
+        [DataMember]
+    public decimal StandardCost { get; set; }
+        [DataMember]
+    public decimal ListPrice { get; set; }
+        [DataMember]
+    public string Size { get; set; }
+        [DataMember]
+    public string SizeUnitMeasureCode { get; set; }
+        [DataMember]
+    public string WeightUnitMeasureCode { get; set; }
+        [DataMember]
+    public Nullable<decimal> Weight { get; set; }
+        [DataMember]
+    public int DaysToManufacture { get; set; }
+        [DataMember]
+    public string ProductLine { get; set; }
+        [DataMember]
+    public string Class { get; set; }
+        [DataMember]
+    public string Style { get; set; }
+        [DataMember]
+    public Nullable<int> ProductSubcategoryID { get; set; }
+        [DataMember]
+    public Nullable<int> ProductModelID { get; set; }
+        [DataMember]
+    public System.DateTime SellStartDate { get; set; }
+        [DataMember]
+    public Nullable<System.DateTime> SellEndDate { get; set; }
+        [DataMember]
+    public Nullable<System.DateTime> DiscontinuedDate { get; set; }
+        [DataMember]
+    public System.Guid rowguid { get; set; }
+        [DataMember]
+    public System.DateTime ModifiedDate { get; set; }
     
         public virtual ProductModel ProductModel { get; set; }
         public virtual ProductSubcategory ProductSubcategory { get; set; }

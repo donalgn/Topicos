@@ -11,7 +11,9 @@ namespace AdventureWorks.Products.Model
 {
     using System;
     using System.Collections.Generic;
+    using System.Runtime.Serialization;
     
+    [DataContract]
     public partial class ProductCategory
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,10 +22,14 @@ namespace AdventureWorks.Products.Model
             this.ProductSubcategories = new HashSet<ProductSubcategory>();
         }
     
-        public int ProductCategoryID { get; set; }
-        public string Name { get; set; }
-        public System.Guid rowguid { get; set; }
-        public System.DateTime ModifiedDate { get; set; }
+        [DataMember]
+    public int ProductCategoryID { get; set; }
+        [DataMember]
+    public string Name { get; set; }
+        [DataMember]
+    public System.Guid rowguid { get; set; }
+        [DataMember]
+    public System.DateTime ModifiedDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductSubcategory> ProductSubcategories { get; set; }
