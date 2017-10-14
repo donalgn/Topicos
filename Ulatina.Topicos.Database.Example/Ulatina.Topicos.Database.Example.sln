@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ulatina.Topicos.Database.Ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.Products.Model", "AdventureWorks.Products.Model\AdventureWorks.Products.Model.csproj", "{3A7A2156-FD5F-4FB6-914A-C0B44F60BD27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.Wcf", "AdventureWorks.Wcf\AdventureWorks.Wcf.csproj", "{A68FA112-8AD5-4EAE-9C9C-A506712E81BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3A7A2156-FD5F-4FB6-914A-C0B44F60BD27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A7A2156-FD5F-4FB6-914A-C0B44F60BD27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A7A2156-FD5F-4FB6-914A-C0B44F60BD27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A68FA112-8AD5-4EAE-9C9C-A506712E81BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A68FA112-8AD5-4EAE-9C9C-A506712E81BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A68FA112-8AD5-4EAE-9C9C-A506712E81BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A68FA112-8AD5-4EAE-9C9C-A506712E81BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
