@@ -15,11 +15,18 @@ namespace AdventureWorks.Wcf.Dominio.Repositorio
             _elContexto = new AdventureWorks2014Entities();
         }
 
-        internal IList<Product> ConsultarProductosPorColor(string elColor)
+        internal IList<Product> ConsultarProductosPorColorConInclude(string elColor)
         {
-            List<Product> elResultado = _elContexto.Products.Include("ProductModel").Include("ProductSubcategory").Include("Produ ctReviews").Include("ProductSubcategory.ProductCategory").Where(p => p.Color.Contains(elColor)).ToList();
+            List<Product> elResultado = _elContexto.Products.Include("ProductModel").Include("ProductSubcategory").Include("ProductReviews").Include("ProductSubcategory.ProductCategory").Where(p => p.Color.Contains(elColor)).ToList();
             return elResultado;
         }
+
+        internal IList<Product> ConsultarProductosPorColorSinInclude(string elColor)
+        {
+            List<Product> elResultado = _elContexto.Products.Where(p => p.Color.Contains(elColor)).ToList();
+            return elResultado;
+        }
+
 
     }
 }

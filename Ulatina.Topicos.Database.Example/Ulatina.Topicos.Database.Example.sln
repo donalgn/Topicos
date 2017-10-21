@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.Products.Mod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.Wcf", "AdventureWorks.Wcf\AdventureWorks.Wcf.csproj", "{A68FA112-8AD5-4EAE-9C9C-A506712E81BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureWorks.Tests", "AdventureWorks.Tests\AdventureWorks.Tests.csproj", "{AB5CA92C-4528-47E2-8C4F-0DDE2E3C7969}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A68FA112-8AD5-4EAE-9C9C-A506712E81BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A68FA112-8AD5-4EAE-9C9C-A506712E81BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A68FA112-8AD5-4EAE-9C9C-A506712E81BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB5CA92C-4528-47E2-8C4F-0DDE2E3C7969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB5CA92C-4528-47E2-8C4F-0DDE2E3C7969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB5CA92C-4528-47E2-8C4F-0DDE2E3C7969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB5CA92C-4528-47E2-8C4F-0DDE2E3C7969}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

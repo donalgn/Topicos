@@ -15,7 +15,7 @@ namespace AdventureWorks.Wcf.Dominio.Acciones
             {
                 // haga la consulta en la base de datos
                 var elRepositorio = new AdventureWorks.Wcf.Dominio.Repositorio.Productos();
-                var elResultado = elRepositorio.ConsultarProductosPorColor(elColor);
+                var elResultado = elRepositorio.ConsultarProductosPorColorSinInclude(elColor);
                 return elResultado;
             }
             else
