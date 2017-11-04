@@ -15,6 +15,11 @@ namespace AdventureWorks.Wcf.Dominio.Repositorio
             _elContexto = new AdventureWorks2014Entities();
         }
 
+        public Productos(AdventureWorks2014Entities miContexto)
+        {
+            _elContexto = miContexto;
+        }
+
         internal IList<Product> ConsultarProductosPorColorConInclude(string elColor)
         {
             List<Product> elResultado = _elContexto.Products.Include("ProductModel").Include("ProductSubcategory").Include("ProductReviews").Include("ProductSubcategory.ProductCategory").Where(p => p.Color.Contains(elColor)).ToList();
